@@ -6,20 +6,26 @@ import mongoose from "mongoose";
         type: String,
         required: true,
       },
-      email: {
+      img: {
         type: String,
         required: true,
       },
-      topic: {
-        type: String,
-        required: true,
+      information: {
+        strength: {
+          type: Number,
+          required: true,
+        },
+        lives: {
+          type: Number,
+          required: true,
+        },
       },
-      message: {
+      text: {
         type: String,
         required: true,
       }
  })
 
- const Data = mongoose.model("DB", dataSchema);
+ const Data = mongoose.model("enemies", dataSchema);
 
  export default Data;
