@@ -37,6 +37,10 @@ import mongoose from "mongoose";
     text3: {
       type: [""],
       required: true,
+    },
+    bg: {
+      type: String,
+      required: true,
     }
  })
 
