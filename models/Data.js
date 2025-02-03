@@ -35,8 +35,7 @@ import mongoose from "mongoose";
       required: true,
     },
     text3: {
-      type: [""],
-      required: true,
+      
     },
     bg: {
       type: String,

@@ -45,8 +45,8 @@ router.post("/post", async (request, response) => {
 	"desc":"Get in touch page link",
 	"header":"There for you and care for you",
 	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-	"text2":" It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-	"text3":[["front-desktop/whatwedo-small.png", "lt@coolish.com"], ["front-desktop/maintainable-small.png", "pr@coolish.com"], ["front-desktop/getintouch-small.png", "mn@coolish.com"]],
+	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+	"text3":[{"img":"front-desktop/whatwedo-small.png", "email":"lt@coolish.com"}, {"img":"front-desktop/maintainable-small.png", "email":"pr@coolish.com"}, {"img":"front-desktop/getintouch-small.png", "email":"mn@coolish.com"}],
 	"bg":"#ffb472"
 }
 
