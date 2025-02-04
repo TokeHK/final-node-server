@@ -8,10 +8,6 @@ const router = express.Router();
 
 router.use(express.json());
 
-router.get("/test", (request, response) => {
-  response.send("Hello, World root!");
-});
-
 router.get("/getAllData", async (request, response) => {
   try {
     const allData = await Data.find();
@@ -40,7 +36,6 @@ router.post("/post", async (request, response) => {
 
   try {
     const dataToSave = await data.save();
-    /* console.log(data) */
     response.status(200).json(dataToSave);
   } catch (error) {
     response.status(400).json({ message: error.message });
@@ -56,8 +51,6 @@ router.get("/getById/:id", async (request, response)=>{
     response.status(500).json({ message: error.message });
   }
 });
-
-/* crud = Create, Read, Update, Delete */
 
 router.delete("/delete/:id", async(request, response)=>{
 

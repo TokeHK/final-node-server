@@ -7,7 +7,7 @@ import cors from "cors"
 
 const app = express();
 
-const allowedOrigins = true; //["http://localhost:3000", "http://localhost:3005"]//til info across servers
+const allowedOrigins = true;
 app.use(cors({
 
   origin:allowedOrigins,
@@ -19,9 +19,7 @@ app.use(cors({
 
 app.use('/', routes);
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
+app.listen(PORT, () => {
    
-console.log("Server Listening and is ready on PORT:", port);
+console.log("Server Listening and is ready on PORT:", PORT);
 });
