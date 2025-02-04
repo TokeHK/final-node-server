@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGO_URI = process.env.DB;
+const MONGO_URI = "mongodb+srv://HK:HRqIZ5tzVBr4rZEA@final-advanced-frontend.lerwh.mongodb.net/?retryWrites=true&w=majority&appName=final-advanced-frontend"
 
   mongoose
     .connect(MONGO_URI)
@@ -13,4 +13,4 @@ const MONGO_URI = process.env.DB;
     });
     
 
- export default mongoose;
+export default mongoose;
