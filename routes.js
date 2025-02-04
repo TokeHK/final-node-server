@@ -37,51 +37,6 @@ router.post("/post", async (request, response) => {
     bg: postData.bg,
     logo: postData.logo
   });
-/* 
-
-{
-	"name":"GetInTouch",
-	"frontImg":"front-desktop/front-get-in-touch.png",
-	"subpageImg":"front-desktop/front-getintouch-link.png",
-	"frontMobileImg":"front-mobil/weba-mobil.getintouch.png",
-	"desc":"Get in touch page link",
-	"header":"There for you and care for you",
-	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-	"text3":[{"img":"front-desktop/whatwedo-small.png", "email":"lt@coolish.com"}, {"img":"front-desktop/maintainable-small.png", "email":"pr@coolish.com"}, {"img":"front-desktop/getintouch-small.png", "email":"mn@coolish.com"}],
-	"bg":"#ffb472",
-  "logo":"logo/logo-b.png"
-}
-
-{
-	"name":"Maintainable",
-	"frontImg":"front-desktop/front-maintainable.png",
-	"subpageImg":"front-desktop/front-maintainable-link.png",
-	"frontMobileImg":"front-mobil/weba-3-mobil-maintainable.png",
-	"desc":"Maintainable page link",
-	"header":"Design is the matter of choice",
-	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-	"text3":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-	"bg":"#bfddef",
-  "logo":"logo/logo-a.png"
-}
-
-{
-	"name":"WhatWeDo",
-	"frontImg":"front-desktop/front-what-we-do.png",
-	"subpageImg":"front-desktop/front-what-we-do-link.png",
-	"frontMobileImg":"front-mobil/weba-2-mobil-whatwedo.png",
-	"desc":"What we do page link",
-	"header":"Keeping your all upto date",
-	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
-	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-	"text3":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-	"bg":"#abcfe6",
-  "logo":"logo/logo-a.png"
-}
-  
-*/
 
   try {
     const dataToSave = await data.save();
