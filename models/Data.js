@@ -40,6 +40,10 @@ import mongoose from "mongoose";
     bg: {
       type: String,
       required: true,
+    },
+    logo: {
+      type: String,
+      required: true,
     }
  })
 

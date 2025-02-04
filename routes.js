@@ -23,20 +23,22 @@ router.get("/getAllData", async (request, response) => {
 
 router.post("/post", async (request, response) => {
 
-  const formData = request.body;
+  const postData = request.body;
   const data = new Data({
-    name: formData.name,
-    frontImg: formData.frontImg,
-    subpageImg: formData.subpageImg,
-    frontMobileImg: formData.frontMobileImg,
-    desc: formData.desc,
-    header: formData.header,
-    text1: formData.text1,
-    text2: formData.text2,
-    text3: formData.text3,
-    bg: formData.bg
+    name: postData.name,
+    frontImg: postData.frontImg,
+    subpageImg: postData.subpageImg,
+    frontMobileImg: postData.frontMobileImg,
+    desc: postData.desc,
+    header: postData.header,
+    text1: postData.text1,
+    text2: postData.text2,
+    text3: postData.text3,
+    bg: postData.bg,
+    logo: postData.logo
   });
-  /* 
+/* 
+
 {
 	"name":"GetInTouch",
 	"frontImg":"front-desktop/front-get-in-touch.png",
@@ -47,7 +49,8 @@ router.post("/post", async (request, response) => {
 	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 	"text3":[{"img":"front-desktop/whatwedo-small.png", "email":"lt@coolish.com"}, {"img":"front-desktop/maintainable-small.png", "email":"pr@coolish.com"}, {"img":"front-desktop/getintouch-small.png", "email":"mn@coolish.com"}],
-	"bg":"#ffb472"
+	"bg":"#ffb472",
+  "logo":"logo/logo-b.png"
 }
 
 {
@@ -60,7 +63,8 @@ router.post("/post", async (request, response) => {
 	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
 	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 	"text3":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-	"bg":"#bfddef"
+	"bg":"#bfddef",
+  "logo":"logo/logo-a.png"
 }
 
 {
@@ -73,14 +77,15 @@ router.post("/post", async (request, response) => {
 	"text1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
 	"text2":"standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 	"text3":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-	"bg":"#abcfe6"
+	"bg":"#abcfe6",
+  "logo":"logo/logo-a.png"
 }
   
-  */
+*/
 
   try {
     const dataToSave = await data.save();
-    console.log(data)
+    /* console.log(data) */
     response.status(200).json(dataToSave);
   } catch (error) {
     response.status(400).json({ message: error.message });
