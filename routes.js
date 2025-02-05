@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import Data from "./models/Data.js";
+import { Message } from "./models/Data.js";
 
 dotenv.config();
 
@@ -14,6 +15,24 @@ router.get("/getAllData", async (request, response) => {
     response.json(allData);
   } catch (error) {
     response.status(500).json({ message: error.message });
+  }
+});
+
+router.post("/postMessage", async (request, response) => {
+  const { name, email, topic, message } = request.body;
+
+  const postMessage = new Message({
+    name,
+    email,
+    topic,
+    message,
+  });
+
+  try {
+    const messageToSave = await postMessage.save();
+    response.status(200).json(messageToSave);
+  } catch (error) {
+    response.status(400).json({ message: error.message });
   }
 });
 

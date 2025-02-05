@@ -49,4 +49,25 @@ import mongoose from "mongoose";
 
  const Data = mongoose.model("cards", dataSchema);
 
- export default Data;
+ const messageSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  topic: {
+    type: String,
+    required: true,
+  },
+  message: {
+    type: String,
+    required: true,
+  },
+});
+
+export const Message = mongoose.model("messages", messageSchema);
+
+export default Data;
